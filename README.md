@@ -13,6 +13,7 @@ The modern MSBob is fundamentally a hybrid app. Edge Chromium (its not an shared
 
 
 ![MSBob_AlnLYUv4xp](https://github.com/builtbybel/MSBob/assets/57478606/18e76d7b-bb5d-4fe1-bcba-df1c9919fad7)
+
 Source is, as always, on its way and will be available soon
 
 ### How does it work: 
