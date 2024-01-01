@@ -1,4 +1,4 @@
-# MSBob for a Windows at Ease
+# Microsoft Bob's Evolution
 
 Who still remembers Microsoft Bob? Behind it was software designed to make the operating system Windows 3.1 more intuitive and user-friendly. Even then, Microsoft recognized the need for an enhanced user experience, acknowledging the less-than-friendly nature of the existing Windows version.
 
