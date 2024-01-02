@@ -59,5 +59,20 @@
     <description>The app is a PWA, which is available not only for Windows 11, but also for Windows 10.</description>
     <removeCommand>Get-AppxPackage -AllUsers *TikTok* | Remove-AppxPackage</removeCommand>
   </app>
+    <app>
+    <name>Clipchamp.Clipchamp</name>
+    <description>Clipchamp is a web-based application. It's also not entirely free!</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Clipchamp* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>Microsoft.SkypeApp</name>
+    <description>The official Microsoft Sykpe app</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Skype* | Remove-AppxPackage</removeCommand>
+  </app>
+    <app>
+    <name>Spotify</name>
+    <description>Spotify’s Desktop app is basically Chromium instance.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Spotify* | Remove-AppxPackage</removeCommand>
+  </app>
   <!-- Add more app entries as needed -->
 </apps>
