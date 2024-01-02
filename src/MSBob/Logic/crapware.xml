@@ -61,7 +61,7 @@
   </app>
  <app>
     <name>TEST App</name>
-    <descriptio> Just a test app</description>
+    <description> Just a test app</description>
     <removeCommand>Get-AppxPackage -AllUsers *Elk* | Remove-AppxPackage</removeCommand>
   </app>
   <!-- Add more app entries as needed -->
