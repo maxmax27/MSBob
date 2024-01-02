@@ -59,6 +59,10 @@
     <description>The app is a PWA, which is available not only for Windows 11, but also for Windows 10.</description>
     <removeCommand>Get-AppxPackage -AllUsers *TikTok* | Remove-AppxPackage</removeCommand>
   </app>
-
+ <app>
+    <name>TEST App</name>
+    <description> Just a test app</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Elk* | Remove-AppxPackage</removeCommand>
+  </app>
   <!-- Add more app entries as needed -->
 </apps>
