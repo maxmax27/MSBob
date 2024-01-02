@@ -74,5 +74,11 @@
     <description>Spotify’s Desktop app is basically Chromium instance.</description>
     <removeCommand>Get-AppxPackage -AllUsers *Spotify* | Remove-AppxPackage</removeCommand>
   </app>
+  <app>
+    <name>9E2F88E3.TWITTER</name>
+    <description>Nothing more than a frontend for the X website. You really don't need it.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Twitter* | Remove-AppxPackage</removeCommand>
+  </app>
+  
   <!-- Add more app entries as needed -->
 </apps>
