@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSBob</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right bottom, #ededed, #d1d1d1);
+            color: #000;
+            padding: 20px;
+            text-align: left;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        h1 {
+            color: #000;
+        }
+
+        #devicesHeader,
+        #privacyHeader,
+        #personalizationHeader,
+        #buttonsContainer,
+        #githubLink {
+            background: rgba(236, 242, 255, 0.8); /* Baby Blue */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+        }
+
+        .header-caption {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        #githubLink {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        #bobLink {
+            text-decoration: none;
+            color: #000;
+            font-size: 28px;
+            animation: pulse 1.5s infinite;
+            display: inline-block;
+        }
+
+        #msBobCaption {
+            font-size: 10px;
+        }
+		
+		#versionNumber {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 9px;
+            color: #888; /* Set your preferred text color */
+        }
+        .glassy-box {
+            background: rgba(255, 204, 128, 0.8); /* Orange */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 0px 0;
+        }
+
+        .glassy-box button {
+            background-color: #ff008e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+
+        .glassy-box button:hover {
+            background-color: #ff4dce;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            margin-right: 20px;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .toggle-switch-label {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+            width: 50px;
+            height: 24px;
+            background-color: #00bfff; /* Baby Blue */
+            border-radius: 12px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-switch-label:before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: #008000; /* Green */
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch input:checked + .toggle-switch-label {
+            background-color: #ff4dce;
+        }
+
+        .toggle-switch input:checked + .toggle-switch-label:before {
+            transform: translateX(26px);
+        }
+
+        .checkbox-label {
+            margin-left: 10px;
+            display: inline-block;
+            color: #000;
+            font-weight: bold;
+        }
+
+        #logContainer {
+            background: rgba(255, 236, 179, 0.8); /* Light Orange */
+            color: #000;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                border-color: rgba(255, 0, 142, 0.5);
+            }
+
+            50% {
+                border-color: rgba(255, 0, 142, 0.8);
+            }
+
+            100% {
+                border-color: rgba(255, 0, 142, 0.5);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar"></div>
+
+    <h1>Unlock your Microsoft experience</h1>
+
+    <div class="glassy-box" id="devicesHeader">
+        <div id="deviceHeader" class="header-caption">Device Settings</div>
+        <p>Configure your device settings to enhance your Windows 11 experience.</p>
+        <button id="btnOpenAccountSettings" onclick="openAccountSettings()">Let's add your Microsoft account</button>
+        <button id="btnOpenBackupSettings" onclick="openBackupSettings()">Restore backups</button>
+        <button id="btnOpenPinSettings" onclick="openPinSettings()">Create a PIN</button>
+        <button id="btnOpenUpdatePinSettings" onclick="openUpdateSettings()">Check for updates</button>
+    </div>
+
+    <div class="glassy-box" id="devicesHeader">
+        <div id="deviceHeader" class="header-caption">Choose system and privacy settings for your device</div>
+        <p>For the next step, Windows 11 lets you customize system and privacy settings for your device.</p>
+        <div id="statusContainer">
+            <button id="btnSearch" onclick="searchFeatures()">Check my Windows 11 setup</button>
+        </div>
+    </div>
+
+    <div class="glassy-box" id="logContainer"></div>
+
+    <div class="glassy-box" id="checkboxContainer">
+        <div>
+            <p>Windows 11 comes integrated with advertising. Microsoft assigns a unique identifier to track your activity in the Microsoft Store and on UWP apps to target you with relevant ads</p>
+            <label class="toggle-switch" for="Advertising">
+                <input type="checkbox" id="Advertising">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Let apps show me personalized ads by using my advertising ID</span>
+        </div>
+
+        <div>
+            <p>Tips and Suggestions Notifications on your Windows device for a more focused computing experience</p>
+            <label class="toggle-switch" for="Tips and suggestions">
+                <input type="checkbox" id="Tips and suggestions">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Get tips and suggestions when using Windows</span>
+        </div>
+
+        <div>
+            <p>Windows won't be able to help you keep track of your device if you lose it.</p>
+            <label class="toggle-switch" for="Find my device">
+                <input type="checkbox" id="Find my device">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Find my device</span>
+        </div>
+
+        <div>
+            <p>Send only info about your device, its settings and capabilities, and whether it is performing properly. Diagnostic data is used to help keep Windows secure and up to date, troubleshoot problems, and make product improvements</p>
+            <label class="toggle-switch" for="Diagnostic data">
+                <input type="checkbox" id="Diagnostic data">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Diagnostic data</span>
+        </div>
+
+        <div>
+            <p>Help Microsoft improve your Windows experience and fix problems more quickly by sending us additional diagnostic data. This includes data about websites you browse, how you use apps and features, and enhanced error reporting.</p>
+            <label class="toggle-switch" for="Send optional diagnostic data">
+                <input type="checkbox" id="Send optional diagnostic data">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Send optional diagnostic data</span>
+        </div>
+
+        <div>
+            <p>You can customize your lock screen. Try changing the background to a favorite photo or slide show. You can also choose quick status notifications to show you upcoming calendar events, social network updates, or other app and system notifications.</p>
+            <label class="toggle-switch" for="Lock screen">
+                <input type="checkbox" id="Lock screen">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Use personalized lock screen</span>
+        </div>
+
+        <div>
+            <p>If your PC is experiencing slowdowns or inexplicable crashes, then you should make it your priority to diagnose what’s causing those problems. You can configure Windows so that you receive verbose startup, shutdown, logon, and logoff status messages. Verbose status messages may be helpful when you're troubleshooting slow startup, shutdown, logon, or logoff behavior.</p>
+            <label class="toggle-switch" for="Display highly detailed status messages">
+                <input type="checkbox" id="Display highly detailed status messages">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Display highly detailed status messages</span>
+        </div>
+
+        <div>
+            <p>When you create a new account in Windows, it comes up with options related to privacy. For example, you will see the option to enable or disable Speech recognition, Location service, Find my device, Inking & typing, and so on.</p>
+            <label class="toggle-switch" for="Privacy Settings Experience at sign-in">
+                <input type="checkbox" id="Privacy Settings Experience at sign-in">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Privacy Settings Experience at sign-in</span>
+        </div>
+		
+		    <div>
+            <p>The Windows 11 Start menu comes with a default Bing search engine. It shows up when you use Windows Search or open the Start menu. For local searches, it doesn't work well and slows down the search experience.</p>
+            <label class="toggle-switch" for="Bing Cloud content search">
+                <input type="checkbox" id="Bing Cloud content search">
+                <span class="toggle-switch-label"></span>
+            </label>
+            <span class="checkbox-label">Say goodbye to Bing Cloud content search</span>
+        </div>
+		
+
+    <div class="glassy-box" id="buttonsContainer">
+        <button id="btnEnable" onclick="disableFeatures()">Deny selected</button>
+        <button id="btnDisable" onclick="enableFeatures()">Allow selected</button>
+    </div>
+
+      <div class="glassy-box" id="devicesHeader">
+        <div id="deviceHeader" class="header-caption">Meet Windows: Personalizing your experience</div>
+        <p>A few simple tweaks can make your Windows experience stand out</p>
+        <button id="btnOpenWallpaperSettings" onclick="openWallpaperSettings()">Choose custom Wallpaper</button>
+        <button id="btnOpenThemeSettings" onclick="openThemeSettings()">Toggle Dark/Light mode</button>
+    </div>
+
+      <div class="glassy-box" id="devicesHeader">
+        <div id="deviceHeader" class="header-caption">Clean up the crapware  <span style="color: red; font-size: 11px; margin-left: 12px;">*This option is not supported by Microsoft</span></div>
+        <p>According to sources, Microsoft made a number of agreements with third-party suppliers to have software stubs on the new, improved Windows 11 Start Menu. Icons for applications like Picsart Pro, WhatsApp, and Adobe Lightroom are included.
+			When you click one of these buttons, the program will be downloaded and installed.
+			On Windows11, streaming apps like Spotify and social media apps like Instagram and TikTok have taken their place.
+			MSBob comes with a local 'crapware.xml' database. You can search through this database, remove what you find, and even extend the database with a simple editor.</p>
+			<button id="btnSearchCrapware" onclick="searchCrapware()">Search for crapware...</button>
+			<button id="btnRemoveCrapware" onclick="removeCrapware()">Remove crapware</button>
+    </div>
+	
+	
+    <div id="githubLink">
+        <span id="msBobCaption">A Belim app creation on GitHub</span>
+        <a id="bobLink" href="https://github.com/builtbybel/MSBob" target="_blank" title="Follow MSBob on GitHub">&#129299;</a>
+     <span id="versionNumber">V2024.1.1</span>
+	</div>
+	
+<script>
+    function getSelectedItems() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        var selectedItems = [];
+        checkboxes.forEach(function (checkbox) {
+            selectedItems.push({ id: checkbox.id, checked: checkbox.checked });
+        });
+
+        return selectedItems;
+    }
+
+    function updateLog(id, isChecked) {
+        var logContainer = document.getElementById('logContainer');
+        var logMessage = isChecked ? `Feature ID '${id}' is enabled.` : `Feature ID '${id}' is disabled.`;
+        logContainer.innerHTML += logMessage + '<br>';
+    }
+
+    function searchFeatures() {
+        console.log('Search Features clicked');
+        var selectedItems = getSelectedItems();
+        window.chrome.webview.postMessage(JSON.stringify({ action: 'search', checkboxes: selectedItems }));
+    }
+
+    function enableFeatures() {
+        console.log('Enable Features clicked');
+        var selectedItems = getSelectedItems();
+        if (selectedItems.length > 0) {
+            window.chrome.webview.postMessage(JSON.stringify({ action: 'enable', checkboxes: selectedItems }));
+        }
+    }
+
+    function disableFeatures() {
+        console.log('Disable Features clicked');
+        var selectedItems = getSelectedItems();
+        if (selectedItems.length > 0) {
+            window.chrome.webview.postMessage(JSON.stringify({ action: 'disable', checkboxes: selectedItems }));
+        }
+    }
+
+    function openAccountSettings() {
+        window.chrome.webview.postMessage('openAccountSettings');
+    }
+
+    function openBackupSettings() {
+        window.chrome.webview.postMessage('openBackupSettings');
+    }
+
+    function openPinSettings() {
+        window.chrome.webview.postMessage('openPinSettings');
+    }
+
+    function openUpdateSettings() {
+        window.chrome.webview.postMessage('openUpdateSettings');
+    }
+
+    function openWallpaperSettings() {
+        window.chrome.webview.postMessage('openWallpaperSettings');
+    }
+
+    function openThemeSettings() {
+        window.chrome.webview.postMessage('openThemeSettings');
+    }
+	
+	function searchCrapware() {
+        window.chrome.webview.postMessage('searchCrapware');
+    }
+	function removeCrapware() {
+        window.chrome.webview.postMessage('removeCrapware');
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+        // Handle log messages to logContainer, here for Feature logs
+        window.chrome.webview.addEventListener('message', (event) => {
+            const logContainer = document.getElementById('logContainer');
+            logContainer.innerHTML += event.data;
+        });
+    });
+</script>
+</body>
+</html>
