@@ -1,0 +1,64 @@
+<apps>
+  <app>
+    <name>BingNews</name>
+    <description>News app from Microsoft</description>
+    <removeCommand>Get-AppxPackage -AllUsers *BingNews* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>ZuneVideo</name>
+    <description>Video app from Microsoft</description>
+    <removeCommand>Get-AppxPackage -AllUsers *ZuneVideo* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>MicrosoftOfficeHub</name>
+    <description>This is preinstalled Microsoft crapware.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *MicrosoftOfficeHub* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>GetHelp</name>
+    <description>The Get Help app empowers customers to self-help with troubleshooters, instant answers, Microsoft support articles, and more, before contacting assisted support.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *GetHelp* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>WhatsApp</name>
+    <description>WhatsApp has a UWP app for Windows 11, and while it’s not a web wrapper, it doesn’t have as many features as its mobile counterpart. If you dont use it, remove it.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *WhatsApp* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>Netflix</name>
+    <description>Netflix is a popular streaming service that grants users the key to a vast library of TV shows, movies, and documentaries. This is the official Windows 11 app.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Netflix* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>Instagram</name>
+    <description>Instagram app on Microsoft Store is basically a PWA.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Instagram* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>OneDrive</name>
+    <description>Official Microsoft crapware again.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *OneDriveSync* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>Microsoft MixedReality.Portal</name>
+    <description>Official Microsoft crapware.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Microsoft.MixedReality* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>Microsoft Print3D</name>
+    <description>Official Microsoft crapware again.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Microsoft.Print3D* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>Microsoft People</name>
+    <description>Official Microsoft crapware again.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *Microsoft.People* | Remove-AppxPackage</removeCommand>
+  </app>
+  <app>
+    <name>BytedancePte.Ltd.TikTok</name>
+    <description>The app is a PWA, which is available not only for Windows 11, but also for Windows 10.</description>
+    <removeCommand>Get-AppxPackage -AllUsers *TikTok* | Remove-AppxPackage</removeCommand>
+  </app>
+
+  <!-- Add more app entries as needed -->
+</apps>
