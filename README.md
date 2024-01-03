@@ -21,6 +21,7 @@ Source is, as always, on its way and will be available soon
 ### How does it work: 
 Simply locate the MSBob.exe and launch it. You don't need to do anything else for now. You can delete the cache folder 'MSBob.exe.WebView2' as you wish.
 
+
 #### Support statement
 WebView2 apps can run on the following versions of Windows:
 
@@ -34,3 +35,8 @@ WebView2 apps can run on the following versions of Windows:
 - Windows Server 2016
 
 https://learn.microsoft.com/en-US/microsoft-edge/webview2/
+
+**A bob of fun**
+If you want to add some extra fun, I've given the UI a makeover for the sake of nostalgia, bringing back the good old vibes. Go ahead, download 'bobkernel_makeover.zip,' (replace the existing one) and give your Bob a touch of this playful transformation. 
+
+![MSBob_2ZKFp7xq0Z](https://github.com/builtbybel/MSBob/assets/57478606/7cadb04e-2ce0-444b-9cac-e82d4199f6c0)**
