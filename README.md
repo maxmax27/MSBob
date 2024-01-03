@@ -1,5 +1,7 @@
 # Microsoft Bob's Evolution
 
+**It's not like it used to be, nor does it want to be. What remains is the character and the spirit in this Project.**
+
 Who still remembers Microsoft Bob? Behind it was software designed to make the operating system Windows 3.1 more intuitive and user-friendly. Even then, Microsoft recognized the need for an enhanced user experience, acknowledging the less-than-friendly nature of the existing Windows version.
 
 This inconsistency persists today. While the XP search's little Bob with the dog may no longer be part of the Windows scene, and Comic Sans font (believed to have been designed for Bob) endures, the inconsistent UI still permeates many areas of Windows 11. In a nutshell, Bob wasn't well-received back then, and Windows 11 remains a matter of taste. Personally, I appreciate it, and perhaps, with the revamped MSBob, I can elevate and simplify your experience a bit.
