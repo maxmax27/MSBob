@@ -1,4 +1,5 @@
 # Microsoft Bob's Evolution
+![AppIconPNG](https://github.com/builtbybel/MSBob/assets/57478606/f165fa62-c889-4eb0-a402-947f0233d7b3)
 
 **It's not like it used to be, nor does it want to be. What remains is the character and the spirit in this Project.**
 
@@ -40,3 +41,4 @@ https://learn.microsoft.com/en-US/microsoft-edge/webview2/
 If you want to add some extra fun, I've given the UI a makeover for the sake of nostalgia, bringing back the good old vibes. Go ahead, download 'bobkernel_makeover.zip,' (replace the existing one) and give your Bob a touch of this playful transformation. 
 
 ![MSBob_2ZKFp7xq0Z](https://github.com/builtbybel/MSBob/assets/57478606/7cadb04e-2ce0-444b-9cac-e82d4199f6c0)
+
