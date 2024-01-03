@@ -10,11 +10,10 @@ My iteration of MSBob (considered MSBelim, but that might be too obvious 😆, o
 
 The modern MSBob is fundamentally a hybrid app. Edge Chromium (its not an shared runtime and im bundeling webview2 library within download source) is used as the rendering module, allowing JavaScript, HTML and CSS to be embedded. Therefore, don't be surprised if, during usage, a cache folder is created in the application directory of the app. You can search in MSBob via <Ctrl + F> as in your Edge browser, you can zoom via <CTRL + scroll> as in your Chromium.  The app is built securely and initially focuses on integral Windows 11 installation steps. While it should run on Windows 10, extensive testing on this platform is pending.
 
-
 **Originally planned for release two weeks ago, Bob now emerges as the first creation of the new year, 2024. To this end, Happy New Year, friends! May Bob bring you much joy and delight!**
 
+![MSBob_sdqD22nUZ4](https://github.com/builtbybel/MSBob/assets/57478606/a4cfe852-0447-448d-9f2c-fac4c77a5f6d)
 
-![MSBob_n84icsCrgX](https://github.com/builtbybel/MSBob/assets/57478606/6afc3ca0-df52-4bde-a0df-bacfceb68e53)
 
 
 Source is, as always, on its way and will be available soon
