@@ -14,7 +14,8 @@ The modern MSBob is fundamentally a hybrid app. Edge Chromium (its not an shared
 **Originally planned for release two weeks ago, Bob now emerges as the first creation of the new year, 2024. To this end, Happy New Year, friends! May Bob bring you much joy and delight!**
 
 
-![MSBob_AlnLYUv4xp](https://github.com/builtbybel/MSBob/assets/57478606/18e76d7b-bb5d-4fe1-bcba-df1c9919fad7)
+![MSBob_n84icsCrgX](https://github.com/builtbybel/MSBob/assets/57478606/6afc3ca0-df52-4bde-a0df-bacfceb68e53)
+
 
 Source is, as always, on its way and will be available soon
 
