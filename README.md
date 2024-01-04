@@ -40,5 +40,5 @@ https://learn.microsoft.com/en-US/microsoft-edge/webview2/
 **A bob of fun**
 If you want to add some extra fun, I've given the UI a makeover for the sake of nostalgia, bringing back the good old vibes. Go ahead, download 'bobkernel_makeover.zip,' (replace the existing one) and give your Bob a touch of this playful transformation. 
 
-![MSBob_2ZKFp7xq0Z](https://github.com/builtbybel/MSBob/assets/57478606/7cadb04e-2ce0-444b-9cac-e82d4199f6c0)
+![MSBob_SF1ZhyCNuW](https://github.com/builtbybel/MSBob/assets/57478606/67b4c9b1-2479-4041-8d66-c831dc8e0c33)
 
